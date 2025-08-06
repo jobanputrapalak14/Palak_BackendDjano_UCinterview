@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ cocktail.strDrink }}</title>
+</head>
+<body>
+    <h1>{{ cocktail.strDrink }}</h1>
+
+    <p><b>Type:</b> {{ cocktail.strAlcoholic }}</p>
+
+    <img src="{{ cocktail.strDrinkThumb }}" width="150">
+
+    <h2>Instructions</h2>
+    <p>{{ cocktail.strInstructions }}</p>
+
+    <h2>Ingredients</h2>
+    <ul>
+        {% for item in ingredients %}
+             <li>{{ item.ingredient }} {{ item.measure }} </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'search_cocktails' %}">🔙 Back to search</a>
+</body>
+</html>
