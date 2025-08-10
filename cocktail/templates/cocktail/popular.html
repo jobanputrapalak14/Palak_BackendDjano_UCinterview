@@ -1,0 +1,13 @@
+<h1>Most Searched Cocktails</h1>
+<table border="1">
+  <tr>
+    <th>Cocktail</th>
+    <th>Search Count</th>
+  </tr>
+  {% for cocktail in cocktails %}
+  <tr>
+    <td>{{ cocktail.name }}</td>
+    <td>{{ cocktail.search_count }}</td>
+  </tr>
+  {% endfor %}
+</table>
